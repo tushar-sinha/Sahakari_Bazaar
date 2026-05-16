@@ -6,7 +6,6 @@ datasource db {
   provider = "sqlite"
 }
 
-// ─── Investors / Cooperative Members ────────────────────────────────
 model Investor {
   id         String   @id @default(cuid())
   name       String
@@ -23,12 +22,11 @@ model Investor {
   updatedAt  DateTime @updatedAt
 }
 
-// ─── Store Partners ─────────────────────────────────────────────────
 model StorePartner {
-  id           String   @id @default(cuid())
+  id           String    @id @default(cuid())
   storeName    String
   ownerName    String
-  mobile       String   @unique
+  mobile       String    @unique
   email        String?
   address      String
   city         String
@@ -36,18 +34,17 @@ model StorePartner {
   pincode      String
   latitude     Float?
   longitude    Float?
-  category     String   @default("grocery")
+  category     String    @default("grocery")
+  isActive     Boolean   @default(true)
+  createdAt    DateTime  @default(now())
+  updatedAt    DateTime  @updatedAt
   bio          String?
   website      String?
   profileImage String?
-  isActive     Boolean  @default(true)
-  createdAt    DateTime @default(now())
-  updatedAt    DateTime @updatedAt
-  products     Product[]
   orders       Order[]
+  products     Product[]
 }
 
-// ─── Customers ──────────────────────────────────────────────────────
 model Customer {
   id        String   @id @default(cuid())
   name      String
@@ -65,7 +62,6 @@ model Customer {
   orders    Order[]
 }
 
-// ─── Product Categories ─────────────────────────────────────────────
 model Category {
   id       String    @id @default(cuid())
   name     String    @unique
@@ -74,229 +70,195 @@ model Category {
   products Product[]
 }
 
-// ─── Products ───────────────────────────────────────────────────────
 model Product {
-  id           String      @id @default(cuid())
-  name         String
-  slug         String      @unique
-  description  String?
-  price        Float
-  mrp          Float
-  unit         String      @default("1 kg")
-  image        String
-  inStock      Boolean     @default(true)
-  categoryId   String
-  category     Category    @relation(fields: [categoryId], references: [id])
-  storeId      String?
-  store        StorePartner? @relation(fields: [storeId], references: [id])
-  createdAt    DateTime    @default(now())
-  updatedAt    DateTime    @updatedAt
-  orderItems   OrderItem[]
+  id          String        @id @default(cuid())
+  name        String
+  slug        String        @unique
+  description String?
+  price       Float
+  mrp         Float
+  unit        String        @default("1 kg")
+  image       String
+  inStock     Boolean       @default(true)
+  categoryId  String
+  storeId     String?
+  createdAt   DateTime      @default(now())
+  updatedAt   DateTime      @updatedAt
+  orderItems  OrderItem[]
+  store       StorePartner? @relation(fields: [storeId], references: [id])
+  category    Category      @relation(fields: [categoryId], references: [id])
 }
 
-// ─── Orders ─────────────────────────────────────────────────────────
 model Order {
-  id          String      @id @default(cuid())
-  orderNumber String      @unique
+  id          String        @id @default(cuid())
+  orderNumber String        @unique
   customerId  String?
-  customer    Customer?   @relation(fields: [customerId], references: [id])
   storeId     String?
-  store       StorePartner? @relation(fields: [storeId], references: [id])
-  status      String      @default("pending")
+  status      String        @default("pending")
   subtotal    Float
-  deliveryFee Float       @default(0)
+  deliveryFee Float         @default(0)
   total       Float
   address     String?
-  createdAt   DateTime    @default(now())
-  updatedAt   DateTime    @updatedAt
+  createdAt   DateTime      @default(now())
+  updatedAt   DateTime      @updatedAt
+  store       StorePartner? @relation(fields: [storeId], references: [id])
+  customer    Customer?     @relation(fields: [customerId], references: [id])
   items       OrderItem[]
 }
 
-// ─── Order Items ────────────────────────────────────────────────────
 model OrderItem {
   id        String  @id @default(cuid())
   orderId   String
-  order     Order   @relation(fields: [orderId], references: [id])
   productId String
-  product   Product @relation(fields: [productId], references: [id])
   quantity  Int
   price     Float
+  product   Product @relation(fields: [productId], references: [id])
+  order     Order   @relation(fields: [orderId], references: [id])
 }
 
-// ═══════════════════════════════════════════════════════════════════════
-// MOBILITY SERVICE MODELS (Cabs, Bikes, Porter Logistics)
-// ═══════════════════════════════════════════════════════════════════════
-
-// ─── Mobility Users (Riders & Drivers) ────────────────────────────────
 model MobilityUser {
-  id             String   @id @default(cuid())
-  phoneNumber    String   @unique
-  name           String
-  email          String?  @unique
-  profileImage   String?
-  role           String   @default("rider") // "rider" or "driver"
-  rating         Float    @default(5.0)
-  totalRides     Int      @default(0)
-  documentUrl    String?  // For driver license/verification
-  isVerified     Boolean  @default(false)
-  isActive       Boolean  @default(true)
-  bankAccount    String?  // For driver payments
-  emergencyContact String?
-  latitude       Float?
-  longitude      Float?
-  createdAt      DateTime @default(now())
-  updatedAt      DateTime @updatedAt
-  
-  // Relations
-  vehicles       Vehicle[]
-  ridesAsRider   Ride[] @relation("Rider")
-  ridesAsDriver  Ride[] @relation("Driver")
-  reviews        RideReview[]
-  liveLocations  LiveLocation[]
+  id                 String              @id @default(cuid())
+  phoneNumber        String              @unique
+  name               String
+  email              String?             @unique
+  profileImage       String?
+  role               String              @default("rider")
+  rating             Float               @default(5.0)
+  totalRides         Int                 @default(0)
+  documentUrl        String?
+  isVerified         Boolean             @default(false)
+  isActive           Boolean             @default(true)
+  bankAccount        String?
+  emergencyContact   String?
+  latitude           Float?
+  longitude          Float?
+  createdAt          DateTime            @default(now())
+  updatedAt          DateTime            @updatedAt
+  liveLocations      LiveLocation[]
+  ridesAsDriver      Ride[]              @relation("Driver")
+  ridesAsRider       Ride[]              @relation("Rider")
+  reviews            RideReview[]
+  vehicles           Vehicle[]
   walletTransactions WalletTransaction[]
 }
 
-// ─── Vehicles (Cabs, Bikes, Trucks) ──────────────────────────────────
 model Vehicle {
-  id           String   @id @default(cuid())
-  driverId     String
-  driver       MobilityUser @relation(fields: [driverId], references: [id])
-  type         String   @default("cab") // "cab", "bike", "truck"
-  registrationNumber String @unique
-  make         String   // e.g., "Toyota"
-  model        String   // e.g., "Innova"
-  year         Int
-  color        String
-  capacity     Int      @default(4) // 4 for cab, 2 for bike, 1-2 for truck
-  licenseUrl   String?
-  insuranceUrl String?
-  isActive     Boolean  @default(true)
-  createdAt    DateTime @default(now())
-  updatedAt    DateTime @updatedAt
-  
-  // Relations
-  rides        Ride[]
+  id                 String       @id @default(cuid())
+  driverId           String
+  type               String       @default("cab")
+  registrationNumber String       @unique
+  make               String
+  model              String
+  year               Int
+  color              String
+  capacity           Int          @default(4)
+  licenseUrl         String?
+  insuranceUrl       String?
+  isActive           Boolean      @default(true)
+  createdAt          DateTime     @default(now())
+  updatedAt          DateTime     @updatedAt
+  rides              Ride[]
+  driver             MobilityUser @relation(fields: [driverId], references: [id])
 }
 
-// ─── Rides/Bookings ──────────────────────────────────────────────────
 model Ride {
-  id             String   @id @default(cuid())
-  rideNumber     String   @unique
-  riderId        String
-  rider          MobilityUser @relation("Rider", fields: [riderId], references: [id])
-  driverId       String?
-  driver         MobilityUser? @relation("Driver", fields: [driverId], references: [id])
-  vehicleId      String?
-  vehicle        Vehicle? @relation(fields: [vehicleId], references: [id])
-  
-  serviceType    String   // "cab", "bike", "truck"
-  loadType       String?  // For trucks: "small", "medium", "large"
-  helperNeeded   Boolean  @default(false) // For trucks
-  
-  pickupLat      Float
-  pickupLon      Float
-  pickupAddress  String
-  dropoffLat     Float
-  dropoffLon     Float
-  dropoffAddress String
-  
-  estimatedDistance Float? // in km
-  estimatedDuration Int?   // in minutes
-  baseFare       Float
-  distanceRate   Float    // per km
-  estimatedFare  Float
-  actualFare     Float?
-  discount       Float?   @default(0)
-  tax            Float?   @default(0)
-  totalFare      Float?
-  
-  status         String   @default("requested") // "requested", "accepted", "started", "completed", "cancelled"
-  paymentStatus  String   @default("pending")   // "pending", "completed", "failed"
-  paymentMethod  String   @default("cash")      // "cash", "wallet", "card"
-  
-  specialNotes   String?
-  riderNotes     String?
-  
-  startedAt      DateTime?
-  completedAt    DateTime?
-  cancelledAt    DateTime?
-  cancelReason   String?
-  
-  createdAt      DateTime @default(now())
-  updatedAt      DateTime @updatedAt
-  
-  // Relations
-  locations      LiveLocation[]
-  review         RideReview?
+  id                String         @id @default(cuid())
+  rideNumber        String         @unique
+  riderId           String
+  driverId          String?
+  vehicleId         String?
+  serviceType       String
+  loadType          String?
+  helperNeeded      Boolean        @default(false)
+  pickupLat         Float
+  pickupLon         Float
+  pickupAddress     String
+  dropoffLat        Float
+  dropoffLon        Float
+  dropoffAddress    String
+  estimatedDistance Float?
+  estimatedDuration Int?
+  baseFare          Float
+  distanceRate      Float
+  estimatedFare     Float
+  actualFare        Float?
+  discount          Float?         @default(0)
+  tax               Float?         @default(0)
+  totalFare         Float?
+  status            String         @default("requested")
+  paymentStatus     String         @default("pending")
+  paymentMethod     String         @default("cash")
+  specialNotes      String?
+  riderNotes        String?
+  startedAt         DateTime?
+  completedAt       DateTime?
+  cancelledAt       DateTime?
+  cancelReason      String?
+  createdAt         DateTime       @default(now())
+  updatedAt         DateTime       @updatedAt
+  locations         LiveLocation[]
+  vehicle           Vehicle?       @relation(fields: [vehicleId], references: [id])
+  driver            MobilityUser?  @relation("Driver", fields: [driverId], references: [id])
+  rider             MobilityUser   @relation("Rider", fields: [riderId], references: [id])
+  review            RideReview?
 }
 
-// ─── Live Location Tracking ──────────────────────────────────────────
 model LiveLocation {
-  id       String   @id @default(cuid())
-  rideId   String
-  ride     Ride     @relation(fields: [rideId], references: [id])
-  userId   String
-  user     MobilityUser @relation(fields: [userId], references: [id])
-  
+  id        String       @id @default(cuid())
+  rideId    String
+  userId    String
   latitude  Float
   longitude Float
   accuracy  Float?
-  heading   Float?    // Direction in degrees
-  speed     Float?    // Speed in km/h
-  
-  timestamp DateTime @default(now())
-  
+  heading   Float?
+  speed     Float?
+  timestamp DateTime     @default(now())
+  user      MobilityUser @relation(fields: [userId], references: [id])
+  ride      Ride         @relation(fields: [rideId], references: [id])
+
   @@index([rideId])
   @@index([userId])
   @@index([timestamp])
 }
 
-// ─── Ride Reviews/Ratings ────────────────────────────────────────────
 model RideReview {
-  id           String   @id @default(cuid())
-  rideId       String   @unique
-  ride         Ride     @relation(fields: [rideId], references: [id])
-  reviewerId   String
-  reviewer     MobilityUser @relation(fields: [reviewerId], references: [id])
-  
-  rating       Int      // 1-5 stars
-  comment      String?
-  categories   String   // JSON: {"cleanliness": 5, "driving": 4, "communication": 5}
-  
-  createdAt    DateTime @default(now())
-  updatedAt    DateTime @updatedAt
+  id         String       @id @default(cuid())
+  rideId     String       @unique
+  reviewerId String
+  rating     Int
+  comment    String?
+  categories String
+  createdAt  DateTime     @default(now())
+  updatedAt  DateTime     @updatedAt
+  reviewer   MobilityUser @relation(fields: [reviewerId], references: [id])
+  ride       Ride         @relation(fields: [rideId], references: [id])
 }
 
-// ─── Driver Availability/Status ──────────────────────────────────────
 model DriverStatus {
-  id         String   @id @default(cuid())
-  driverId   String   @unique
-  isOnline   Boolean  @default(false)
-  isAvailable Boolean  @default(false)
+  id            String   @id @default(cuid())
+  driverId      String   @unique
+  isOnline      Boolean  @default(false)
+  isAvailable   Boolean  @default(false)
   currentRideId String?
-  latitude   Float?
-  longitude  Float?
-  lastUpdated DateTime @default(now())
-  updatedAt   DateTime @updatedAt
+  latitude      Float?
+  longitude     Float?
+  lastUpdated   DateTime @default(now())
+  updatedAt     DateTime @updatedAt
 }
 
-// ─── Wallet/Payment ──────────────────────────────────────────────────
 model WalletTransaction {
-  id           String   @id @default(cuid())
-  userId       String
-  user         MobilityUser @relation(fields: [userId], references: [id])
-  
-  amount       Float
-  type         String   // "credit", "debit"
-  reason       String   // "ride_payment", "refund", "bonus", "withdrawal"
-  rideId       String?
-  
+  id            String       @id @default(cuid())
+  userId        String
+  amount        Float
+  type          String
+  reason        String
+  rideId        String?
   balanceBefore Float?
   balanceAfter  Float?
-  
-  status       String   @default("completed")
-  createdAt    DateTime @default(now())
-  
+  status        String       @default("completed")
+  createdAt     DateTime     @default(now())
+  user          MobilityUser @relation(fields: [userId], references: [id])
+
   @@index([userId])
   @@index([createdAt])
 }
