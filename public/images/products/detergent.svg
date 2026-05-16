@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <rect width="200" height="200" rx="30" fill="#E3F2FD"/>
+  <rect x="55" y="55" width="90" height="110" rx="8" fill="#1976D2"/>
+  <rect x="55" y="55" width="90" height="30" rx="8" fill="#1565C0"/>
+  <rect x="65" y="95" width="70" height="40" rx="3" fill="#BBDEFB"/>
+  <text x="100" y="76" text-anchor="middle" font-size="11" font-weight="bold" fill="#FFFFFF">DETERGENT</text>
+  <text x="100" y="120" text-anchor="middle" font-size="10" fill="#0D47A1">Powder</text>
+  <circle cx="85" cy="148" r="5" fill="#42A5F5"/>
+  <circle cx="100" cy="150" r="4" fill="#64B5F6"/>
+  <circle cx="115" cy="148" r="5" fill="#42A5F5"/>
+</svg>

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <rect width="200" height="200" rx="30" fill="#E3F2FD"/>
+  <rect x="60" y="55" width="80" height="105" rx="5" fill="#FFFFFF"/>
+  <rect x="60" y="55" width="80" height="30" rx="5" fill="#1565C0"/>
+  <text x="100" y="76" text-anchor="middle" font-size="16" font-weight="bold" fill="#FFF">MILK</text>
+  <rect x="70" y="100" width="60" height="35" rx="3" fill="#BBDEFB"/>
+  <text x="100" y="122" text-anchor="middle" font-size="12" fill="#1976D2">FRESH</text>
+  <polygon points="60,52 75,38 125,38 140,52" fill="#E3F2FD"/>
+  <line x1="100" y1="38" x2="100" y2="28" stroke="#90CAF9" stroke-width="3"/>
+</svg>

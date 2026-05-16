@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <rect width="200" height="200" rx="30" fill="#E3F2FD"/>
+  <ellipse cx="100" cy="115" rx="40" ry="35" fill="#FFFFFF"/>
+  <ellipse cx="100" cy="90" rx="40" ry="10" fill="#BBDEFB"/>
+  <ellipse cx="100" cy="90" rx="35" ry="7" fill="#E3F2FD"/>
+  <rect x="60" y="90" width="80" height="25" fill="#FFFFFF"/>
+  <ellipse cx="100" cy="85" rx="38" ry="5" fill="#90CAF9" opacity="0.4"/>
+  <text x="100" y="140" text-anchor="middle" font-size="13" font-weight="bold" fill="#1565C0">CURD</text>
+  <rect x="60" y="90" width="80" height="2" fill="#BBDEFB"/>
+</svg>

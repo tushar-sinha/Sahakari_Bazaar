@@ -1,0 +1,154 @@
+@import "tailwindcss";
+
+/* ─── CSS Custom Properties ───────────────────────────────────────── */
+:root {
+  --color-primary: #2563eb; /* blue-600 */
+  --color-primary-dark: #1d4ed8; /* blue-700 */
+  --color-primary-light: #3b82f6; /* blue-500 */
+  --color-secondary: #dc2626; /* red-600 */
+  --color-accent: #f59e0b; /* amber-500 */
+  --color-bg: #f8fafc; /* slate-50 */
+  --color-card: #ffffff;
+  --color-text: #1e293b; /* slate-800 */
+  --color-text-light: #64748b; /* slate-500 */
+  --color-border: #e2e8f0; /* slate-200 */
+  --color-success: #16a34a; /* green-600 */
+  --color-danger: #dc2626; /* red-600 */
+  --color-header-top: #2563eb;
+  --color-header-bottom: #1d4ed8;
+}
+
+/* ─── Base Resets ─────────────────────────────────────────────────── */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+/* ─── Custom scrollbar ────────────────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #a1a1a1;
+}
+
+/* ─── Leaflet map fix ─────────────────────────────────────────────── */
+.leaflet-container {
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+/* ─── Product card animation ──────────────────────────────────────── */
+.product-card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+/* ─── Category card animation ─────────────────────────────────────── */
+.category-card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.category-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* ─── Button styles ───────────────────────────────────────────────── */
+.btn-primary {
+  @apply bg-[var(--color-primary)] text-white px-6 py-2.5 rounded-lg font-semibold
+    hover:bg-[var(--color-primary-dark)] transition-all duration-200 
+    active:scale-95 cursor-pointer;
+}
+
+.btn-secondary {
+  @apply bg-[var(--color-secondary)] text-white px-6 py-2.5 rounded-lg font-semibold
+    hover:opacity-90 transition-all duration-200 
+    active:scale-95 cursor-pointer;
+}
+
+.btn-accent {
+  @apply bg-[var(--color-accent)] text-[var(--color-text)] px-6 py-2.5 rounded-lg font-semibold
+    hover:brightness-95 transition-all duration-200 
+    active:scale-95 cursor-pointer;
+}
+
+/* ─── Badge ───────────────────────────────────────────────────────── */
+.badge {
+  @apply inline-flex items-center justify-center min-w-[20px] h-5 px-1.5 
+    rounded-full text-xs font-bold bg-[var(--color-secondary)] text-white;
+}
+
+/* ─── Hero gradient ───────────────────────────────────────────────── */
+.hero-gradient {
+  background: linear-gradient(135deg, #e6f3ff 0%, #ffffff 100%);
+}
+
+/* ─── Skeleton loader animation ───────────────────────────────────── */
+@keyframes shimmer {
+  0% { background-position: -200px 0; }
+  100% { background-position: calc(200px + 100%) 0; }
+}
+.skeleton {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200px 100%;
+  animation: shimmer 1.5s ease-in-out infinite;
+}
+
+/* ─── Quantity selector ───────────────────────────────────────────── */
+.qty-btn {
+  @apply w-8 h-8 flex items-center justify-center rounded-full 
+    border border-[var(--color-primary)] text-[var(--color-primary)] 
+    font-bold cursor-pointer hover:bg-[var(--color-primary)] 
+    hover:text-white transition-colors duration-200;
+}
+
+/* ─── Discount badge ──────────────────────────────────────────────── */
+.discount-badge {
+  @apply absolute top-2 left-2 bg-[var(--color-danger)] text-white 
+    text-xs font-bold px-2 py-0.5 rounded;
+}
+
+/* ─── Input styles ────────────────────────────────────────────────── */
+.input-field {
+  @apply w-full px-4 py-3 border border-gray-300 rounded-lg 
+    focus:ring-2 focus:ring-[var(--color-primary)] focus:border-transparent 
+    outline-none transition-all duration-200 bg-white;
+}
+
+/* ─── Pulse animation for cart badge ──────────────────────────────── */
+@keyframes pulse-badge {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+}
+.cart-badge-pulse {
+  animation: pulse-badge 0.3s ease;
+}
+
+/* ─── Toast overrides ─────────────────────────────────────────────── */
+.toast-success {
+  background: var(--color-primary) !important;
+}

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <rect width="100" height="100" rx="8" fill="#fef3c7"/>
+  <path d="M30 20 L50 10 L70 20 L70 60 L50 70 L30 60 Z" fill="#f59e0b" stroke="#d97706" stroke-width="2"/>
+  <circle cx="45" cy="35" r="3" fill="#ffffff"/>
+  <circle cx="55" cy="35" r="3" fill="#ffffff"/>
+  <path d="M40 45 Q50 50 60 45" stroke="#d97706" stroke-width="2" fill="none"/>
+  <rect x="45" y="75" width="10" height="15" fill="#f59e0b"/>
+  <text x="50" y="95" text-anchor="middle" font-family="Arial, sans-serif" font-size="6" fill="#d97706">CLOTHING</text>
+</svg>

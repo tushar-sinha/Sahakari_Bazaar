@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <rect width="200" height="200" rx="30" fill="#FCE4EC"/>
+  <rect x="65" y="70" width="70" height="45" rx="20" fill="#EC407A"/>
+  <rect x="65" y="70" width="70" height="45" rx="20" fill="none" stroke="#C2185B" stroke-width="2"/>
+  <ellipse cx="100" cy="90" rx="28" ry="15" fill="#F48FB1" opacity="0.5"/>
+  <text x="100" y="97" text-anchor="middle" font-size="12" font-weight="bold" fill="#FFFFFF">SOAP</text>
+  <circle cx="80" cy="135" r="8" fill="#F8BBD0" opacity="0.5"/>
+  <circle cx="100" cy="140" r="6" fill="#F8BBD0" opacity="0.4"/>
+  <circle cx="115" cy="132" r="5" fill="#F8BBD0" opacity="0.3"/>
+  <circle cx="90" cy="148" r="4" fill="#FCE4EC" opacity="0.4"/>
+</svg>

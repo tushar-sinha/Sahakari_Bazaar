@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <rect width="200" height="200" rx="30" fill="#FFEBEE"/>
+  <rect x="60" y="55" width="80" height="105" rx="8" fill="#F44336"/>
+  <rect x="60" y="55" width="80" height="30" rx="8" fill="#D32F2F"/>
+  <rect x="70" y="95" width="60" height="35" rx="4" fill="#FFCDD2"/>
+  <text x="100" y="75" text-anchor="middle" font-size="12" font-weight="bold" fill="#FFCDD2">MASALA</text>
+  <text x="100" y="117" text-anchor="middle" font-size="10" fill="#C62828">Spice Mix</text>
+  <circle cx="82" cy="145" r="5" fill="#FF8A65"/>
+  <circle cx="100" cy="148" r="4" fill="#FFB74D"/>
+  <circle cx="118" cy="145" r="5" fill="#FF7043"/>
+</svg>

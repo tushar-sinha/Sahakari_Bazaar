@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <rect width="200" height="200" rx="30" fill="#FFFDE7"/>
+  <rect x="60" y="80" width="80" height="50" rx="5" fill="#FDD835"/>
+  <rect x="60" y="80" width="80" height="50" rx="5" fill="#FFEB3B"/>
+  <rect x="55" y="75" width="90" height="60" rx="6" fill="none" stroke="#F9A825" stroke-width="2"/>
+  <rect x="65" y="90" width="70" height="30" rx="2" fill="#FFF9C4" opacity="0.5"/>
+  <text x="100" y="110" text-anchor="middle" font-size="14" font-weight="bold" fill="#F57F17">BUTTER</text>
+  <rect x="62" y="132" width="76" height="8" rx="2" fill="#FBC02D"/>
+</svg>

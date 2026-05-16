@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <rect width="200" height="200" rx="30" fill="#F5F5F5"/>
+  <path d="M65 60 L55 155 Q55 165 100 165 Q145 165 145 155 L135 60 Z" fill="#FAFAFA"/>
+  <path d="M65 60 Q100 50 135 60" fill="#E0E0E0"/>
+  <rect x="75" y="80" width="50" height="40" rx="3" fill="#E8F5E9"/>
+  <text x="100" y="100" text-anchor="middle" font-size="14" font-weight="bold" fill="#2E7D32">RICE</text>
+  <text x="100" y="115" text-anchor="middle" font-size="10" fill="#43A047">Basmati</text>
+  <ellipse cx="100" cy="60" rx="35" ry="5" fill="#BDBDBD" opacity="0.5"/>
+  <ellipse cx="90" cy="145" rx="3" ry="6" fill="#E0E0E0" transform="rotate(-10 90 145)"/>
+  <ellipse cx="100" cy="148" rx="3" ry="6" fill="#E0E0E0"/>
+  <ellipse cx="110" cy="145" rx="3" ry="6" fill="#E0E0E0" transform="rotate(10 110 145)"/>
+</svg>

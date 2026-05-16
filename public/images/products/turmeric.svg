@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <rect width="200" height="200" rx="30" fill="#FFFDE7"/>
+  <path d="M70 80 Q65 140 80 155 Q100 165 120 155 Q135 140 130 80Z" fill="#F9A825"/>
+  <path d="M70 80 Q100 70 130 80" fill="#F57F17"/>
+  <ellipse cx="100" cy="80" rx="30" ry="8" fill="#FFD54F"/>
+  <circle cx="90" cy="110" r="8" fill="#FDD835" opacity="0.6"/>
+  <circle cx="110" cy="115" r="7" fill="#FDD835" opacity="0.5"/>
+  <circle cx="100" cy="135" r="6" fill="#FDD835" opacity="0.4"/>
+  <text x="100" y="175" text-anchor="middle" font-size="11" font-weight="bold" fill="#E65100">TURMERIC</text>
+</svg>

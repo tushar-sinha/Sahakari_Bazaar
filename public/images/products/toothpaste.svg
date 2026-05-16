@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <rect width="200" height="200" rx="30" fill="#FFEBEE"/>
+  <rect x="60" y="70" width="80" height="35" rx="10" fill="#FFFFFF"/>
+  <rect x="60" y="70" width="80" height="35" rx="10" fill="none" stroke="#E0E0E0" stroke-width="2"/>
+  <rect x="60" y="80" width="50" height="25" rx="0" fill="#F44336"/>
+  <rect x="110" y="80" width="30" height="25" rx="0" fill="#FFFFFF"/>
+  <rect x="60" y="70" width="80" height="35" rx="10" fill="none" stroke="#BDBDBD" stroke-width="2"/>
+  <rect x="130" y="82" width="15" height="18" rx="3" fill="#EF5350"/>
+  <text x="90" y="98" text-anchor="middle" font-size="8" font-weight="bold" fill="#FFF">PASTE</text>
+  <path d="M145 88 L160 80 Q165 85 160 90 L145 95" fill="#E0E0E0"/>
+  <path d="M158 83 Q162 85 158 88" fill="#42A5F5"/>
+</svg>

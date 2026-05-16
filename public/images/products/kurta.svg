@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <rect width="100" height="100" rx="8" fill="#f3f4f6"/>
+  <path d="M35 22 L28 40 L36 42 L36 74 L64 74 L64 42 L72 40 L65 22 L55 28 L50 26 L45 28Z" fill="#7c3aed"/>
+  <path d="M50 26 L50 36 M47 31 L53 31" stroke="#ddd6fe" stroke-width="1.5"/>
+  <text x="50" y="90" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" fill="#374151">KURTA</text>
+</svg>

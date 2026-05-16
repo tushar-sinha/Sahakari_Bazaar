@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <rect width="100" height="100" rx="8" fill="#f3f4f6"/>
+  <path d="M30 58 C28 44 34 28 46 24 C58 20 68 30 66 44 C64 54 52 62 42 64 C36 65 31 62 30 58Z" fill="#d97706"/>
+  <path d="M34 56 C32 45 38 32 48 28 C57 25 64 33 62 44 C60 53 51 59 43 61 C38 62 35 59 34 56Z" fill="#f59e0b"/>
+  <path d="M38 54 C37 45 42 35 50 33 C57 31 61 37 59 45 C57 52 51 57 45 58 C41 59 39 57 38 54Z" fill="#fbbf24"/>
+  <text x="50" y="82" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" fill="#374151">CASHEWS</text>
+</svg>

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <rect width="100" height="100" rx="8" fill="#f3f4f6"/>
+  <rect x="36" y="24" width="28" height="50" rx="12" fill="#fbbf24"/>
+  <line x1="50" y1="27" x2="50" y2="71" stroke="#d97706" stroke-width="1"/>
+  <line x1="40" y1="29" x2="40" y2="69" stroke="#d97706" stroke-width="0.8"/>
+  <line x1="60" y1="29" x2="60" y2="69" stroke="#d97706" stroke-width="0.8"/>
+  <line x1="36" y1="38" x2="64" y2="38" stroke="#d97706" stroke-width="0.8"/>
+  <line x1="36" y1="46" x2="64" y2="46" stroke="#d97706" stroke-width="0.8"/>
+  <line x1="36" y1="54" x2="64" y2="54" stroke="#d97706" stroke-width="0.8"/>
+  <line x1="36" y1="62" x2="64" y2="62" stroke="#d97706" stroke-width="0.8"/>
+  <path d="M44 18 C44 18 42 24 50 25 C58 24 56 18 56 18" fill="#16a34a"/>
+  <text x="50" y="88" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" fill="#374151">SWEET CORN</text>
+</svg>

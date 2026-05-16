@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <rect width="200" height="200" rx="30" fill="#37474F"/>
+  <circle cx="100" cy="110" r="40" fill="#212121"/>
+  <circle cx="100" cy="110" r="37" fill="#424242"/>
+  <circle cx="100" cy="110" r="18" fill="#FAFAFA"/>
+  <circle cx="100" cy="110" r="14" fill="#212121"/>
+  <circle cx="100" cy="110" r="8" fill="#FAFAFA"/>
+  <text x="100" y="165" text-anchor="middle" font-size="16" font-weight="bold" fill="#FFFFFF">OREO</text>
+</svg>

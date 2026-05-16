@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <rect width="200" height="200" rx="30" fill="#FFF8E1"/>
+  <path d="M65 60 L55 155 Q55 165 100 165 Q145 165 145 155 L135 60 Z" fill="#FFB300"/>
+  <path d="M65 60 Q100 50 135 60" fill="#FFA000"/>
+  <rect x="75" y="80" width="50" height="40" rx="3" fill="#FFF8E1"/>
+  <text x="100" y="100" text-anchor="middle" font-size="13" font-weight="bold" fill="#E65100">ATTA</text>
+  <text x="100" y="115" text-anchor="middle" font-size="10" fill="#F57C00">Wheat</text>
+  <ellipse cx="100" cy="60" rx="35" ry="5" fill="#FF8F00" opacity="0.5"/>
+</svg>

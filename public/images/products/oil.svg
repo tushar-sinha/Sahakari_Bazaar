@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <rect width="200" height="200" rx="30" fill="#FFF8E1"/>
+  <rect x="72" y="70" width="56" height="90" rx="8" fill="#FFD54F"/>
+  <rect x="80" y="55" width="40" height="20" rx="5" fill="#FFE082"/>
+  <rect x="90" y="45" width="20" height="15" rx="4" fill="#FFECB3"/>
+  <rect x="96" y="38" width="8" height="10" rx="2" fill="#FFC107"/>
+  <rect x="80" y="95" width="40" height="25" rx="3" fill="#FFF8E1"/>
+  <text x="100" y="112" text-anchor="middle" font-size="11" font-weight="bold" fill="#E65100">OIL</text>
+  <ellipse cx="100" cy="130" rx="15" ry="8" fill="#FFB300" opacity="0.4"/>
+</svg>

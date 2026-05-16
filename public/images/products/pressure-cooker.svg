@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <rect width="100" height="100" rx="8" fill="#f3f4f6"/>
+  <rect x="20" y="42" width="60" height="28" rx="6" fill="#374151"/>
+  <rect x="22" y="44" width="56" height="24" rx="5" fill="#6b7280"/>
+  <ellipse cx="50" cy="42" rx="30" ry="8" fill="#4b5563" stroke="#374151" stroke-width="1"/>
+  <rect x="44" y="28" width="12" height="14" rx="4" fill="#374151"/>
+  <circle cx="50" cy="31" r="4" fill="#ef4444"/>
+  <rect x="14" y="50" width="12" height="8" rx="2" fill="#374151"/>
+  <rect x="74" y="50" width="12" height="8" rx="2" fill="#374151"/>
+  <text x="50" y="86" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" fill="#374151">COOKER</text>
+</svg>

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <rect width="200" height="200" rx="30" fill="#FFF8E1"/>
+  <ellipse cx="100" cy="120" rx="50" ry="25" fill="#FDD835"/>
+  <ellipse cx="100" cy="115" rx="48" ry="22" fill="#FFEB3B"/>
+  <circle cx="80" cy="115" r="8" fill="#F9A825" opacity="0.6"/>
+  <circle cx="100" cy="112" r="7" fill="#F9A825" opacity="0.5"/>
+  <circle cx="120" cy="115" r="8" fill="#F9A825" opacity="0.6"/>
+  <circle cx="90" cy="120" r="6" fill="#F9A825" opacity="0.4"/>
+  <circle cx="110" cy="120" r="6" fill="#F9A825" opacity="0.4"/>
+  <text x="100" y="165" text-anchor="middle" font-size="14" font-weight="bold" fill="#F57F17">DAL</text>
+</svg>

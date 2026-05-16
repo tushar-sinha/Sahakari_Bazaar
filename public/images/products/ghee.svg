@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <rect width="200" height="200" rx="30" fill="#FFF8E1"/>
+  <ellipse cx="100" cy="120" rx="38" ry="35" fill="#FFD54F"/>
+  <ellipse cx="100" cy="85" rx="30" ry="10" fill="#FFC107"/>
+  <rect x="70" y="85" width="60" height="35" fill="#FFD54F"/>
+  <ellipse cx="100" cy="82" rx="28" ry="7" fill="#FFE082"/>
+  <rect x="85" y="70" width="30" height="18" rx="4" fill="#FFC107"/>
+  <rect x="90" y="65" width="20" height="10" rx="3" fill="#FFE082"/>
+  <text x="100" y="140" text-anchor="middle" font-size="12" font-weight="bold" fill="#E65100">GHEE</text>
+</svg>

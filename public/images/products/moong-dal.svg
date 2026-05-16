@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <rect width="200" height="200" rx="30" fill="#E8F5E9"/>
+  <ellipse cx="100" cy="120" rx="50" ry="25" fill="#66BB6A"/>
+  <ellipse cx="100" cy="115" rx="48" ry="22" fill="#81C784"/>
+  <circle cx="80" cy="115" r="7" fill="#4CAF50" opacity="0.6"/>
+  <circle cx="100" cy="112" r="6" fill="#4CAF50" opacity="0.5"/>
+  <circle cx="120" cy="115" r="7" fill="#4CAF50" opacity="0.6"/>
+  <circle cx="90" cy="120" r="5" fill="#4CAF50" opacity="0.4"/>
+  <circle cx="110" cy="118" r="5" fill="#4CAF50" opacity="0.4"/>
+  <text x="100" y="165" text-anchor="middle" font-size="12" font-weight="bold" fill="#2E7D32">MOONG</text>
+</svg>

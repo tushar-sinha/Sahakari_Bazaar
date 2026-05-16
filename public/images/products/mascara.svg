@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <rect width="100" height="100" rx="8" fill="#fef3c7"/>
+  <rect x="40" y="30" width="20" height="40" rx="10" fill="#f59e0b" stroke="#d97706" stroke-width="2"/>
+  <rect x="42" y="35" width="16" height="30" fill="#fbbf24"/>
+  <circle cx="50" cy="50" r="3" fill="#ffffff"/>
+  <rect x="45" y="65" width="10" height="3" fill="#d97706"/>
+  <text x="50" y="80" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" fill="#d97706">MASCARA</text>
+</svg>

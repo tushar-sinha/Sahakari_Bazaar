@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <rect width="200" height="200" rx="30" fill="#FFF3E0"/>
+  <ellipse cx="100" cy="110" rx="50" ry="35" fill="#FF9800"/>
+  <ellipse cx="100" cy="105" rx="45" ry="28" fill="#FFB74D"/>
+  <path d="M70 100 Q80 95 90 100 Q100 95 110 100 Q120 95 130 100" fill="none" stroke="#E65100" stroke-width="2"/>
+  <circle cx="80" cy="110" r="5" fill="#F57C00" opacity="0.5"/>
+  <circle cx="100" cy="108" r="4" fill="#F57C00" opacity="0.4"/>
+  <circle cx="120" cy="112" r="5" fill="#F57C00" opacity="0.5"/>
+  <text x="100" y="160" text-anchor="middle" font-size="12" font-weight="bold" fill="#E65100">NAMKEEN</text>
+</svg>
