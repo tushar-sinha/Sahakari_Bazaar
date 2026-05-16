@@ -187,9 +187,9 @@ export function BookingForm({ onBookingSubmit }: BookingFormProps) {
       },
       loadType: selectedServiceType === "truck" ? loadType : undefined,
       helperNeeded: selectedServiceType === "truck" ? helperNeeded : false,
-      estimatedDistance,
-      estimatedDuration,
-      estimatedFare,
+      estimatedDistance: estimatedDistance ?? undefined,
+      estimatedDuration: estimatedDuration ?? undefined,
+      estimatedFare: estimatedFare ?? undefined,
       specialNotes,
       status: "requested",
     };
