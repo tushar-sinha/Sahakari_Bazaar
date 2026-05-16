@@ -2,9 +2,10 @@
 
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
+import { Suspense } from "react";
 import { FiAlertTriangle } from "react-icons/fi";
 
-export default function AuthErrorPage() {
+function AuthErrorContent() {
   const searchParams = useSearchParams();
   const error = searchParams.get("error");
 
@@ -23,33 +24,41 @@ export default function AuthErrorPage() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 flex items-center justify-center py-12 px-4">
-      <div className="max-w-md w-full space-y-8">
-        <div className="text-center">
-          <FiAlertTriangle className="mx-auto h-12 w-12 text-red-500" />
-          <h2 className="mt-6 text-3xl font-bold text-gray-900">
-            Authentication Error
-          </h2>
-          <p className="mt-2 text-gray-600">
-            {getErrorMessage(error)}
-          </p>
-        </div>
-
-        <div className="text-center">
-          <Link
-            href="/signin"
-            className="btn-primary inline-block"
-          >
-            Try Signing In Again
-          </Link>
-        </div>
-
-        <div className="text-center">
-          <Link href="/" className="text-blue-600 hover:text-blue-500">
-            Go back to home
-          </Link>
-        </div>
+    <div className="max-w-md w-full space-y-8">
+      <div className="text-center">
+        <FiAlertTriangle className="mx-auto h-12 w-12 text-red-500" />
+        <h2 className="mt-6 text-3xl font-bold text-gray-900">
+          Authentication Error
+        </h2>
+        <p className="mt-2 text-gray-600">
+          {getErrorMessage(error)}
+        </p>
       </div>
+
+      <div className="text-center">
+        <Link
+          href="/signin"
+          className="btn-primary inline-block"
+        >
+          Try Signing In Again
+        </Link>
+      </div>
+
+      <div className="text-center">
+        <Link href="/" className="text-blue-600 hover:text-blue-500">
+          Go back to home
+        </Link>
+      </div>
+    </div>
+  );
+}
+
+export default function AuthErrorPage() {
+  return (
+    <div className="min-h-screen bg-gray-50 flex items-center justify-center py-12 px-4">
+      <Suspense fallback={<div className="text-gray-600">Loading...</div>}>
+        <AuthErrorContent />
+      </Suspense>
     </div>
   );
 }
