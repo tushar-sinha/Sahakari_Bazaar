@@ -81,7 +81,7 @@ export default function MobilityPage() {
       {/* Header */}
       <div className="bg-gradient-to-r from-blue-600 to-blue-700 text-white py-8 px-4 sm:px-6 shadow-lg">
         <div className="w-full">
-          <h1 className="text-4xl font-bold mb-2">🚗 Quick Mobility</h1>
+          <h1 className="text-2xl sm:text-4xl font-bold mb-2">🚗 Quick Mobility</h1>
           <p className="text-blue-100">Fast and reliable booking for Cabs, Bikes & Trucks</p>
         </div>
       </div>
@@ -89,10 +89,10 @@ export default function MobilityPage() {
       {/* Main Content */}
       <div className="w-full px-4 sm:px-6 py-8">
         {/* Tabs */}
-        <div className="flex gap-2 mb-8 border-b border-gray-200">
+        <div className="flex gap-2 mb-8 border-b border-gray-200 overflow-x-auto">
           <button
             onClick={() => setActiveTab("book")}
-            className={`px-6 py-3 font-semibold transition-all ${
+            className={`px-4 sm:px-6 py-2.5 sm:py-3 font-semibold transition-all whitespace-nowrap ${
               activeTab === "book"
                 ? "border-b-2 border-blue-600 text-blue-600"
                 : "text-gray-600 hover:text-gray-800"
@@ -103,7 +103,7 @@ export default function MobilityPage() {
           {currentBooking && (
             <button
               onClick={() => setActiveTab("track")}
-              className={`px-6 py-3 font-semibold transition-all ${
+              className={`px-4 sm:px-6 py-2.5 sm:py-3 font-semibold transition-all whitespace-nowrap ${
                 activeTab === "track"
                   ? "border-b-2 border-blue-600 text-blue-600"
                   : "text-gray-600 hover:text-gray-800"
@@ -114,7 +114,7 @@ export default function MobilityPage() {
           )}
           <button
             onClick={() => setActiveTab("history")}
-            className={`px-6 py-3 font-semibold transition-all ${
+            className={`px-4 sm:px-6 py-2.5 sm:py-3 font-semibold transition-all whitespace-nowrap ${
               activeTab === "history"
                 ? "border-b-2 border-blue-600 text-blue-600"
                 : "text-gray-600 hover:text-gray-800"

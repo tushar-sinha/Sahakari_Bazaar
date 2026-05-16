@@ -38,7 +38,7 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
 
       <div className="grid gap-8 lg:grid-cols-[360px_1fr]">
         <div className="rounded-3xl overflow-hidden border border-gray-200 bg-white">
-          <div className="relative h-96 bg-gray-100">
+          <div className="relative h-64 sm:h-96 bg-gray-100">
             <Image
               src={product.image}
               alt={product.name}
@@ -53,12 +53,12 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
             <div className="text-sm text-green-700 font-semibold mb-2">
               {product.category?.name ?? "Uncategorized"}
             </div>
-            <h1 className="text-3xl font-bold text-gray-900">{product.name}</h1>
+            <h1 className="text-2xl sm:text-3xl font-bold text-gray-900">{product.name}</h1>
             <p className="text-sm text-gray-600 mt-3">
               Sold by {product.store?.storeName ?? "Marketplace Partner"}
             </p>
             <div className="mt-6 flex items-center gap-3">
-              <span className="text-4xl font-bold text-gray-900">₹{product.price}</span>
+              <span className="text-2xl sm:text-4xl font-bold text-gray-900">₹{product.price}</span>
               {product.mrp > product.price && (
                 <span className="text-sm text-gray-500 line-through">₹{product.mrp}</span>
               )}

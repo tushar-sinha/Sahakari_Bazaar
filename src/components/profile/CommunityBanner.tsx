@@ -122,13 +122,13 @@ export default function CommunityBanner() {
       </div>
 
       {/* Content Container */}
-      <div className="relative h-full flex items-center px-[40px]">
+      <div className="relative h-full flex items-center px-4 sm:px-[40px]">
         {/* Left Side - Text Content */}
         <div className="flex-1 text-white max-w-2xl pl-6 pr-6">
           <div className="mb-2 text-sm font-semibold opacity-90 tracking-wide">
             {slide.imageDescription}
           </div>
-          <h2 className="text-3xl md:text-4xl font-bold mb-3 leading-tight">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 leading-tight">
             {slide.headline}
           </h2>
           <p className="text-base md:text-lg opacity-95 mb-6 max-w-lg">

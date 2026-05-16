@@ -393,25 +393,25 @@ export default function ProfilePage({ params }: ProfilePageProps) {
             <div className="flex-1">
               <div className="mb-2">
                 <p className="text-sm font-semibold text-blue-600 uppercase tracking-wide">Fresh Valley Organic Store</p>
-                <h1 className="text-4xl font-bold text-slate-900 mb-1">
+                <h1 className="text-2xl sm:text-4xl font-bold text-slate-900 mb-1">
                   {profile?.businessName}
                 </h1>
                 <p className="text-lg text-slate-600">{profile?.ownerName}</p>
               </div>
 
               {/* Stats */}
-              <div className="grid grid-cols-3 gap-4 my-6 py-4 border-t border-b border-blue-200/50">
+              <div className="grid grid-cols-3 gap-2 sm:gap-4 my-6 py-4 border-t border-b border-blue-200/50">
                 <div className="text-center md:text-left">
-                  <p className="text-2xl font-bold text-slate-900">{profile?.followers.toLocaleString()}</p>
-                  <p className="text-xs font-semibold text-slate-600 uppercase tracking-wider">Followers</p>
+                  <p className="text-lg sm:text-2xl font-bold text-slate-900">{profile?.followers.toLocaleString()}</p>
+                  <p className="text-[10px] sm:text-xs font-semibold text-slate-600 uppercase tracking-wider">Followers</p>
                 </div>
                 <div className="text-center md:text-left">
-                  <p className="text-2xl font-bold text-yellow-500">{profile?.averageRating.toFixed(1)}★</p>
-                  <p className="text-xs font-semibold text-slate-600 uppercase tracking-wider">Rating</p>
+                  <p className="text-lg sm:text-2xl font-bold text-yellow-500">{profile?.averageRating.toFixed(1)}★</p>
+                  <p className="text-[10px] sm:text-xs font-semibold text-slate-600 uppercase tracking-wider">Rating</p>
                 </div>
                 <div className="text-center md:text-left">
-                  <p className="text-2xl font-bold text-green-600">5 yrs</p>
-                  <p className="text-xs font-semibold text-slate-600 uppercase tracking-wider">Service</p>
+                  <p className="text-lg sm:text-2xl font-bold text-green-600">5 yrs</p>
+                  <p className="text-[10px] sm:text-xs font-semibold text-slate-600 uppercase tracking-wider">Service</p>
                 </div>
               </div>
 

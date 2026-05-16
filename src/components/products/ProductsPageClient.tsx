@@ -39,7 +39,7 @@ export function ProductsPageClient({
   });
 
   return (
-    <div className="flex gap-6">
+    <div className="flex gap-6 min-w-0">
       {/* Sidebar — Categories */}
       <aside className="hidden lg:block w-56 shrink-0">
         <div className="bg-white rounded-xl border border-gray-100 p-4 sticky top-[120px]">
@@ -82,7 +82,7 @@ export function ProductsPageClient({
       </aside>
 
       {/* Main content */}
-      <div className="flex-1">
+      <div className="flex-1 min-w-0">
         {/* Top bar */}
         <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between mb-6 bg-white rounded-xl p-4 border border-gray-100">
           <div className="text-sm text-gray-600">

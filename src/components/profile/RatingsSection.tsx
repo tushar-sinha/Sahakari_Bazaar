@@ -82,7 +82,7 @@ export default function RatingsSection({ profile }: RatingsSectionProps) {
                 />
               ))}
             </div>
-            <p className="text-4xl font-bold text-gray-800 mb-1">
+            <p className="text-3xl sm:text-4xl font-bold text-gray-800 mb-1">
               {averageRating.toFixed(1)}
             </p>
             <p className="text-gray-600">

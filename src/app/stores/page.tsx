@@ -15,7 +15,7 @@ import type { NearbyStore } from "@/lib/types";
 const StoreMap = dynamic(() => import("@/components/stores/StoreMap"), {
   ssr: false,
   loading: () => (
-    <div className="w-full h-[560px] bg-gray-50 rounded-2xl flex items-center justify-center">
+    <div className="w-full h-[300px] sm:h-[560px] bg-gray-50 rounded-2xl flex items-center justify-center">
       <div className="flex flex-col items-center gap-3">
         <FiLoader className="animate-spin text-green-500" size={36} />
         <span className="text-sm text-gray-400">Loading map…</span>
@@ -157,8 +157,8 @@ export default function StoresPage() {
             <select
               value={serviceCategory}
               onChange={(e) => setServiceCategory(e.target.value)}
-              className="h-[38px] w-[150px] px-2 bg-gray-100 text-gray-700 text-sm rounded-l-lg border-r border-gray-300 outline-none cursor-pointer"
-              style={{ maxHeight: '180px', minWidth: '110px', overflowY: 'auto' }}
+              className="h-[42px] w-[110px] sm:w-[150px] px-2 bg-gray-100 text-gray-700 text-sm rounded-l-lg border-r border-gray-300 outline-none cursor-pointer"
+              style={{ maxHeight: '180px', minWidth: '90px', overflowY: 'auto' }}
             >
               {serviceCategories.map((category) => (
                 <option key={category} value={category}>
@@ -202,7 +202,7 @@ export default function StoresPage() {
             onStoreSelect={(id) => setSelectedStoreId(id)}
           />
         ) : (
-          <div className="w-full h-[560px] bg-gray-50 rounded-2xl flex items-center justify-center">
+          <div className="w-full h-[300px] sm:h-[560px] bg-gray-50 rounded-2xl flex items-center justify-center">
             <div className="flex flex-col items-center gap-3">
               <FiLoader className="animate-spin text-green-500" size={36} />
               <span className="text-sm text-gray-400">
@@ -229,7 +229,7 @@ export default function StoresPage() {
 
       {/* ── Store cards grid ─────────────────────────────────────────── */}
       {loading ? (
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
           {Array.from({ length: 5 }).map((_, i) => (
             <div
               key={i}
@@ -259,7 +259,7 @@ export default function StoresPage() {
           </p>
         </div>
       ) : (
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
           {stores.map((store) => (
               <div
                 key={store.id}
