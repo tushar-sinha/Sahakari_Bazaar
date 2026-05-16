@@ -1,5 +1,5 @@
 export default {
   datasource: {
-    url: 'file:./prisma/sahakari.db'
+    url: process.env.DATABASE_URL ?? 'file:./prisma/sahakari.db'
   }
 }
