@@ -7,10 +7,10 @@ import { prisma } from "@/lib/prisma";
  */
 export async function PATCH(
   req: NextRequest,
-  { params }: { params: { rideId: string } }
+  { params }: { params: Promise<{ rideId: string }> }
 ) {
   try {
-    const { rideId } = params;
+    const { rideId } = await params;
     const body = await req.json();
     const { status, cancelReason } = body;
 
