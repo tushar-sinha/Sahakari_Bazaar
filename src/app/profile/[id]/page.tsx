@@ -13,7 +13,7 @@ import {
   FiInstagram,
 } from "react-icons/fi";
 import { getMockProfileById } from "@/lib/profile-mock-data";
-import type { BusinessProfile } from "@/lib/profile-types";
+import type { BusinessProfile, BusinessType } from "@/lib/profile-types";
 import CommunityBanner from "@/components/profile/CommunityBanner";
 import BusinessSection from "@/components/profile/BusinessSection";
 import AboutSection from "@/components/profile/AboutSection";
@@ -311,7 +311,7 @@ export default function ProfilePage({ params }: ProfilePageProps) {
       setProfile({
         ...profile,
         bio: aboutDraft.bio,
-        businessType: aboutDraft.businessType,
+        businessType: aboutDraft.businessType as BusinessType,
         serviceCategory: aboutDraft.serviceCategory,
         state: aboutDraft.state,
       });
