@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Link from "next/link";
 import { useState, useEffect } from "react";
@@ -376,60 +376,120 @@ export function Navbar() {
 
       {/* Mobile drawer */}
       {mobileOpen && (
-        <div className="md:hidden bg-white border-t shadow-lg">
-          <div className="p-4 space-y-3">
-            <div className="flex items-center gap-2 text-gray-600 text-sm">
-              <FiMapPin size={16} className="text-green-600" />
-              <span>{location}</span>
+        <div className="md:hidden bg-white border-t shadow-lg max-h-[80vh] overflow-y-auto">
+          <div className="p-4 space-y-1">
+            {/* Location */}
+            <div className="flex items-center gap-2 text-gray-500 text-sm py-2">
+              <FiMapPin size={16} className="text-green-600 shrink-0" />
+              <span className="truncate">{location}</span>
             </div>
-            <hr />
-            <Link
-              href="/"
-              onClick={() => setMobileOpen(false)}
-              className="block py-2 text-gray-800 font-medium"
-            >
-              Home
-            </Link>
-            <Link
-              href="/products"
-              onClick={() => setMobileOpen(false)}
-              className="block py-2 text-gray-800"
-            >
-              All Products
-            </Link>
-            <Link
-              href="/cart"
-              onClick={() => setMobileOpen(false)}
-              className="block py-2 text-gray-800 flex items-center gap-2"
-            >
-              <FiShoppingCart size={18} />
-              Cart {itemCount > 0 && `(${itemCount})`}
-            </Link>
+            <hr className="my-1" />
+
+            {/* Auth section */}
+            {session?.user ? (
+              <div className="py-2">
+                <div className="flex items-center gap-3 mb-3">
+                  <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center shrink-0">
+                    <span className="text-blue-700 font-bold text-sm">
+                      {session.user.name?.charAt(0).toUpperCase()}
+                    </span>
+                  </div>
+                  <div className="min-w-0">
+                    <div className="font-semibold text-gray-800 truncate">
+                      {session.user.name}
+                    </div>
+                    <div className="text-xs text-gray-400 truncate">
+                      {session.user.email}
+                    </div>
+                  </div>
+                </div>
+                <Link
+                  href={`/profile/${session.user.id || "me"}`}
+                  onClick={() => setMobileOpen(false)}
+                  className="flex items-center gap-2 py-2.5 text-gray-700"
+                >
+                  <FiUser size={16} /> My Profile
+                </Link>
+                <Link
+                  href="/wishlist"
+                  onClick={() => setMobileOpen(false)}
+                  className="flex items-center justify-between py-2.5 text-gray-700"
+                >
+                  <span className="flex items-center gap-2">
+                    <FiHeart size={16} /> Wishlist
+                  </span>
+                  {mounted && wishlist.length > 0 && (
+                    <span className="badge">{wishlist.length}</span>
+                  )}
+                </Link>
+                <Link
+                  href="/returns-orders"
+                  onClick={() => setMobileOpen(false)}
+                  className="flex items-center gap-2 py-2.5 text-gray-700"
+                >
+                  Returns &amp; Orders
+                </Link>
+                <Link
+                  href="/account"
+                  onClick={() => setMobileOpen(false)}
+                  className="flex items-center gap-2 py-2.5 text-gray-700"
+                >
+                  Account Settings
+                </Link>
+                <hr className="my-2" />
+                <button
+                  onClick={() => { signOut({ callbackUrl: "/" }); setMobileOpen(false); }}
+                  className="w-full text-left py-2 text-red-500 text-sm font-medium"
+                >
+                  Sign Out
+                </button>
+              </div>
+            ) : (
+              <div className="py-2 flex gap-3">
+                <Link
+                  href="/signin"
+                  onClick={() => setMobileOpen(false)}
+                  className="flex-1 py-2.5 text-center bg-blue-600 text-white rounded-lg font-semibold text-sm"
+                >
+                  Sign In
+                </Link>
+                <Link
+                  href="/signup"
+                  onClick={() => setMobileOpen(false)}
+                  className="flex-1 py-2.5 text-center border border-blue-600 text-blue-600 rounded-lg font-semibold text-sm"
+                >
+                  Sign Up
+                </Link>
+              </div>
+            )}
+
+            <hr className="my-1" />
+
             <Link
               href="/mobility"
               onClick={() => setMobileOpen(false)}
-              className="block py-2 text-gray-800 flex items-center gap-2"
+              className="flex items-center gap-2 py-2.5 text-gray-700"
             >
-              <FiTruck size={18} />
-              Quick Mobility
+              <FiTruck size={16} className="text-yellow-500" /> Quick Mobility
             </Link>
             <Link
               href="/investor-onboarding"
               onClick={() => setMobileOpen(false)}
-              className="block py-2 text-green-700 font-semibold"
+              className="flex items-center gap-2 py-2.5 text-green-700 font-semibold"
             >
-              🤝 Join our Community
+              Join our Community
             </Link>
             <Link
               href="/stores"
               onClick={() => setMobileOpen(false)}
-              className="block py-2 text-gray-800"
+              className="flex items-center gap-2 py-2.5 text-gray-700"
             >
-              � Nearby Services
+              Nearby Stores
             </Link>
-            <hr />
-            <div className="text-xs text-gray-500">
-              Groceries · Electronics · Clothing · Home & Kitchen · Beauty
+
+            <hr className="my-1" />
+            <div className="text-xs text-gray-400 py-1">
+              Groceries · Electronics · Clothing · Home &amp; Kitchen · Beauty
             </div>
           </div>
         </div>

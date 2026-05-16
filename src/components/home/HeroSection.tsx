@@ -20,21 +20,21 @@ export function HeroSection() {
               From local cooperative stores to your doorstep. Quality groceries
               at wholesale prices — powered by community, not corporations.
             </p>
-            <div className="flex flex-wrap gap-3">
+            <div className="flex flex-col sm:flex-row flex-wrap gap-3">
               <Link
                 href="/products"
-                className="bg-[#ffd814] text-gray-900 px-8 py-3.5 rounded-lg font-bold text-lg hover:bg-[#f0c800] transition-colors active:scale-95"
+                className="bg-[#ffd814] text-gray-900 px-8 py-3.5 rounded-lg font-bold text-lg hover:bg-[#f0c800] transition-colors active:scale-95 text-center"
               >
                 Start Shopping →
               </Link>
               <Link
                 href="/investor-onboarding"
-                className="border-2 border-gray-900 px-8 py-3.5 rounded-lg font-bold text-lg hover:bg-gray-100 transition-colors"
+                className="border-2 border-gray-900 px-8 py-3.5 rounded-lg font-bold text-lg hover:bg-gray-100 transition-colors text-center"
               >
                 Join our Community
               </Link>
             </div>
-            <div className="flex items-center gap-6 mt-8 text-sm text-gray-600">
+            <div className="flex flex-wrap items-center gap-x-5 gap-y-2 mt-8 text-sm text-gray-600">
               <span>✅ 10-min delivery</span>
               <span>✅ No minimum order</span>
               <span>✅ Fresh guarantee</span>

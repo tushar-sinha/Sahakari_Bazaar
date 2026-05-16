@@ -68,18 +68,18 @@ export default async function HomePage() {
           ].map((item) => (
             <div
               key={item.title}
-              className="bg-white rounded-xl p-4 shadow-sm border border-gray-100 flex items-center gap-3"
+              className="bg-white rounded-xl p-3 sm:p-4 shadow-sm border border-gray-100 flex items-center gap-2 sm:gap-3"
             >
               <div
-                className={`w-12 h-12 rounded-full flex items-center justify-center ${item.color}`}
+                className={`w-10 h-10 sm:w-12 sm:h-12 shrink-0 rounded-full flex items-center justify-center ${item.color}`}
               >
                 <item.icon size={22} />
               </div>
-              <div>
-                <div className="font-semibold text-sm text-gray-800">
+              <div className="min-w-0">
+                <div className="font-semibold text-xs sm:text-sm text-gray-800 leading-tight">
                   {item.title}
                 </div>
-                <div className="text-xs text-gray-500">{item.desc}</div>
+                <div className="text-[10px] sm:text-xs text-gray-500">{item.desc}</div>
               </div>
             </div>
           ))}
@@ -164,7 +164,7 @@ export default async function HomePage() {
       <section className="max-w-[1400px] mx-auto px-4 mt-12">
         <div className="bg-gradient-to-r from-green-700 to-green-500 rounded-2xl p-8 md:p-12 text-white">
           <div className="max-w-2xl">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">
               Join the Cooperative Revolution
             </h2>
             <p className="text-green-100 text-lg mb-6 leading-relaxed">
@@ -173,16 +173,16 @@ export default async function HomePage() {
               network. Invest in your community, earn returns, and help local
               stores thrive.
             </p>
-            <div className="flex flex-wrap gap-3">
+            <div className="flex flex-col sm:flex-row flex-wrap gap-3">
               <Link
                 href="/investor-onboarding"
-                className="bg-white text-green-700 px-6 py-3 rounded-lg font-bold hover:bg-green-50 transition-colors"
+                className="bg-white text-green-700 px-6 py-3 rounded-lg font-bold hover:bg-green-50 transition-colors text-center"
               >
                 Become an Investor →
               </Link>
               <Link
                 href="/stores"
-                className="border-2 border-white px-6 py-3 rounded-lg font-bold hover:bg-white/10 transition-colors"
+                className="border-2 border-white px-6 py-3 rounded-lg font-bold hover:bg-white/10 transition-colors text-center"
               >
                 Find Nearby Stores
               </Link>

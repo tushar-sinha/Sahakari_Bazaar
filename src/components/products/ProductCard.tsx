@@ -99,10 +99,11 @@ export function ProductCard({ product }: { product: Product }) {
         {!cartItem ? (
           <button
             onClick={handleAdd}
-            className="w-full py-2 px-3 bg-[var(--color-primary)] text-white rounded-lg font-semibold text-sm flex items-center justify-center gap-2 hover:bg-[var(--color-primary-dark)] transition-colors active:scale-95"
+            className="w-full py-2 px-3 bg-[var(--color-primary)] text-white rounded-lg font-semibold text-sm flex items-center justify-center gap-1.5 hover:bg-[var(--color-primary-dark)] transition-colors active:scale-95"
           >
-            <FiShoppingCart size={16} />
-            Add to Cart
+            <FiShoppingCart size={15} />
+            <span className="hidden sm:inline">Add to Cart</span>
+            <span className="sm:hidden">Add</span>
           </button>
         ) : (
           <div className="flex items-center justify-between bg-green-50 rounded-lg px-2 py-1">
