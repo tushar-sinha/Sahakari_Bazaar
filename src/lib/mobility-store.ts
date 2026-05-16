@@ -22,6 +22,7 @@ export interface MobilityBooking {
   actualFare?: number;
   status?: string;
   specialNotes?: string;
+  createdAt?: string | Date;
 }
 
 export interface LiveLocationData {
