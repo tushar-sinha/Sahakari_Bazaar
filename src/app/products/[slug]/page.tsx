@@ -6,14 +6,15 @@ import { prisma } from "@/lib/prisma";
 export const dynamic = "force-dynamic";
 
 interface ProductPageProps {
-  params: {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 }
 
 export default async function ProductDetailPage({ params }: ProductPageProps) {
+  const { slug } = await params;
   const product = await prisma.product.findUnique({
-    where: { slug: params.slug },
+    where: { slug },
     include: { category: true, store: true },
   });
 
